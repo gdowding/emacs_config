@@ -1,6 +1,11 @@
-;; This makes life easier
-;; Also see the Cask file
+;;; init -- set up emacs
+;;; Commentary:
 
+
+;;; Code:
+
+;; Cask makes life easier
+;; Also see the Cask file
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
@@ -32,4 +37,8 @@
 (require 'virtualenvwrapper)
 (venv-initialize-interactive-shells)
 (venv-initialize-eshell)
+;; @todo: use expand-path or whatever it is
 (setq venv-location "/Users/gdowding/.venvs")
+
+(provide 'init)
+;;; init.el ends here
